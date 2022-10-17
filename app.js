@@ -8,6 +8,8 @@ const server = http.createServer(app);
 const wss = new WebSocketServer({server: server});
 app.use(express.static(path.join(__dirname, 'public')))
 
+const port = process.env.PORT || 6969
+
 
  
 wss.on('connection', client => {
@@ -16,6 +18,6 @@ wss.on('connection', client => {
     });
 })
 
-server.listen(6969, () => {
+server.listen(port, () => {
     console.log('Listening to port 6969');
 })
