@@ -1,7 +1,6 @@
 const express = require('express');
 const http = require('http');
 const { WebSocketServer } = require('ws');
-const WebSocket = require('ws');
 const path = require('path');
 const app = express();
 const server = http.createServer(app);
