@@ -21,7 +21,7 @@ function display(text, mine = false){
 
 
 
-const socket = new WebSocket("ws://localhost:6969");
+const socket = new WebSocket("https://websockets-chatroom-heroku.herokuapp.com");
 
 socket.addEventListener('open', () => {
     console.log('connection established');
