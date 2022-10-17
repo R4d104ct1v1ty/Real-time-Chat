@@ -1,11 +1,11 @@
 const express = require('express');
+const http = require('http');
 const { WebSocketServer } = require('ws');
 const WebSocket = require('ws');
 const path = require('path');
 const app = express();
-const http = require('http').Server(app);
-// const server = http.createServer(app);
-const wss = new WebSocketServer(http);
+const server = http.createServer(app);
+const wss = new WebSocketServer({server: server});
 app.use(express.static(path.join(__dirname, 'public')))
 
 const port = process.env.PORT || 6969
