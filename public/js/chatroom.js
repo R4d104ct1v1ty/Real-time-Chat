@@ -20,8 +20,8 @@ function display(text, mine = false){
 }
 
 
-
-const socket = new WebSocket("https://websockets-chatroom-heroku.herokuapp.com");
+var HOST = location.origin.replace(/^http/, 'ws');
+const socket = new WebSocket(HOST);
 
 socket.addEventListener('open', () => {
     console.log('connection established');
