@@ -25,7 +25,6 @@ const socket = new WebSocket(HOST);
 
 socket.addEventListener('open', () => {
     console.log('connection established');
-    
 })
 
 socket.addEventListener("message", (ev) => {
